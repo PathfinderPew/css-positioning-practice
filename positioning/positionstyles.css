@@ -1,0 +1,289 @@
+/* Activity 1 styles */
+.content1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: repeat(4, 120px); /* Adjust row heights to accommodate 10px gap */
+  gap: 10px; /* Uniform 10px gap between rows and columns */
+  justify-items: center; /* Horizontally center the items */
+}
+
+.red1 {
+  grid-column: 1 / 3; /* Span both columns */
+  grid-row: 1 / 2; /* Take up the first row */
+  background-color: red;
+  width: 100%; /* Full width */
+  height: 100px;
+}
+
+.green1:nth-child(2) {
+  grid-column: 1 / 2; /* First green in column 1 */
+  grid-row: 2 / 3;    /* Second row */
+  background-color: green;
+  width: 100px;
+  height: 110px; /* Adjust height */
+}
+
+.green1:nth-child(3) {
+  grid-column: 2 / 3; /* Second green in column 2 */
+  grid-row: 2 / 3;    /* Second row */
+  background-color: green;
+  width: 100px;
+  height: 110px; /* Adjust height */
+}
+
+.yellow1:nth-child(4) {
+  grid-column: 1 / 2; /* First yellow in column 1 */
+  grid-row: 3 / 4;    /* Third row */
+  background-color: gold;
+  width: 100px;
+  height: 110px; /* Adjust height */
+}
+
+.yellow1:nth-child(5) {
+  grid-column: 2 / 3; /* Second yellow in column 2 */
+  grid-row: 3 / 4;    /* Third row */
+  background-color: gold;
+  width: 100px;
+  height: 110px; /* Adjust height */
+}
+
+.blue1 {
+  grid-column: 1 / 3; /* Span both columns */
+  grid-row: 4 / 5;    /* Fourth row */
+  background-color: blue;
+  width: 100%;
+  height: 100px;
+}
+
+/* Activity 2 styles */
+.content2 {
+  position: relative; /* Establish a positioning context for the boxes */
+  width: 400px; /* Set a fixed width for the content area */
+  height: 400px; /* Set a fixed height for the content area */
+}
+
+.red2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  top: 0px;
+  left: 0px;
+  z-index: 1; /* Red is the lowest layer */
+}
+
+.green2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  top: 50px;  /* Reduced offset for more overlap */
+  left: 50px; /* Reduced offset for more overlap */
+  z-index: 2; /* Green on top of red */
+}
+
+.yellow2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  top: 100px; /* Reduced offset for more overlap */
+  left: 100px; /* Reduced offset for more overlap */
+  z-index: 3; /* Yellow on top of green */
+}
+
+.blue2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  top: 150px;  /* Reduced offset for more overlap */
+  left: 150px; /* Reduced offset for more overlap */
+  z-index: 4;  /* Blue on top of yellow */
+}
+
+/* Activity 3 styles */
+.content3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: auto; /* Adjust rows based on content */
+  column-gap: 20px; /* 20px gap between the green and yellow boxes */
+}
+
+.red3 {
+  grid-column: 1 / 3; /* Span across both columns */
+  height: 100px;
+  background-color: red;
+}
+
+.green3 {
+  grid-column: 1 / 2; /* Green in the first column */
+  height: 200px; /* Twice the height of red */
+  background-color: green;
+}
+
+.yellow3 {
+  grid-column: 2 / 3; /* Yellow in the second column */
+  height: 200px; /* Twice the height of red */
+  background-color: gold;
+}
+
+.blue3 {
+  grid-column: 1 / 3; /* Span across both columns */
+  height: 100px;
+  background-color: blue;
+}
+
+/* Activity 4 styles */
+.content4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: repeat(3, 100px); /* Three rows, each 100px tall */
+  /* Remove the gap between boxes */
+}
+
+.red4 {
+  grid-column: 1 / 2; /* Red in the first column */
+  grid-row: 1 / 4; /* Red spans all three rows */
+  background-color: red;
+  height: 100%; /* Ensure full height */
+}
+
+.green4 {
+  grid-column: 2 / 3; /* Green in the second column */
+  grid-row: 1 / 2; /* Green takes the first row */
+  background-color: green;
+  height: 100px; /* Fixed height for green */
+}
+
+.yellow4 {
+  grid-column: 2 / 3; /* Yellow in the second column */
+  grid-row: 2 / 3; /* Yellow takes the second row */
+  background-color: gold;
+  height: 100px; /* Fixed height for yellow */
+}
+
+.blue4 {
+  grid-column: 2 / 3; /* Blue in the second column */
+  grid-row: 3 / 4; /* Blue takes the third row */
+  background-color: blue;
+  height: 100px; /* Fixed height for blue */
+}
+
+/* Activity 5 styles */
+.content5 {
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* Red box spanning across the top */
+.red5 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  margin: 0;
+}
+
+/* Floating green box to the left */
+.green5 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin-right: 10px; /* Adds small space between green box and text */
+  margin-bottom: 10px; /* Allows content to wrap under green box */
+}
+
+/* Yellow box with text wrapping around green */
+.yellow5 {
+  background-color: yellow;
+  padding: 10px;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Blue box spanning across the bottom */
+.blue5 {
+  clear: both; /* Place it below the floated elements */
+  background-color: blue;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+}
+
+/* Clearfix to ensure proper float clearing */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Activity 6 styles */
+.content6 {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 equal columns, each 100px */
+  grid-template-rows: repeat(3, 100px); /* 3 equal rows, each 100px */
+  gap: 0px; /* No gap between the boxes */
+  position: relative;
+}
+
+.red6 {
+  grid-column: 1 / 3; /* Span the first two columns */
+  grid-row: 1 / 2; /* First row */
+  background-color: red;
+  z-index: 1; /* Below blue */
+  width: 200px; /* 2 columns wide */
+  height: 100px; /* 1 row tall */
+  position: absolute;
+  top: 0;
+  left: 0; /* Positioned at the top-left */
+}
+
+.blue6 {
+  grid-column: 1 / 4; /* Span all 3 columns */
+  grid-row: 1 / 4; /* Span all 3 rows */
+  background-color: blue;
+  z-index: 2; /* Above red but below green and yellow */
+  width: 220px; /* Slightly smaller width */
+  height: 220px; /* Slightly smaller height */
+  position: absolute;
+  top: 40px; /* Positioned slightly lower to overlap red */
+  left: 40px; /* Positioned to overlap red */
+}
+
+.yellow6 {
+  grid-column: 3 / 4; /* Last column */
+  grid-row: 2 / 4; /* Last two rows */
+  background-color: yellow;
+  z-index: 3; /* Higher than blue */
+  width: 100px; /* 1 column wide */
+  height: 200px; /* 2 rows tall */
+  position: absolute;
+  bottom: 0;
+  right: 0; /* Positioned at the bottom-right */
+}
+
+.green6 {
+  grid-column: 1 / 2; /* First column */
+  grid-row: 3 / 4; /* Last row */
+  background-color: green;
+  z-index: 4; /* Highest layer, overlaps blue */
+  width: 100px; /* 1 column wide */
+  height: 100px; /* 1 row tall */
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Positioned at the bottom-left */
+}
+
+/* Default styles */
+.activity {
+  width: 70%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid black;
+  padding: 10px;
+  clear: both;
+  overflow: auto;
+}
